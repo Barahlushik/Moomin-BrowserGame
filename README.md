@@ -11,5 +11,3 @@
 - Jakarta JSTL 2.0.0 
 - PostgreSQL driver (ver. 42.7.5) 
 - JDBC 4.3
-- 
-- 🧹 **Scheduled Cleanup** – Expired sessions - 🥇 **Winners Board** – Stores and displays winners with their completion time.
