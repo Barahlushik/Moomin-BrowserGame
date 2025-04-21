@@ -1,0 +1,53 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <servlet>
+        <servlet-name>Game</servlet-name>
+        <servlet-class>servlets.game.GameServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Game</servlet-name>
+        <url-pattern>/game</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SignInServlet</servlet-name>
+        <servlet-class>servlets.auth.SignInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignInServlet</servlet-name>
+        <url-pattern>/sign-in</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SignUpServlet</servlet-name>
+        <servlet-class>servlets.auth.SignUpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignUpServlet</servlet-name>
+        <url-pattern>/sign-up</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>Winners</servlet-name>
+        <servlet-class>servlets.game.WinnersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Winners</servlet-name>
+        <url-pattern>/winners</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>service.listener.SessionSchedulerContextListener</listener-class>
+    </listener>
+        
+    <listener>
+        <listener-class>service.listener.GameSessionTimerContextListener</listener-class>
+    </listener>
+
+</web-app>
